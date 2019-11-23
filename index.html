@@ -3,6 +3,38 @@
 <head>    
 	<meta charset="UTF-8">
 	<title> Estilização com CSS </title>
+	<style>
+		
+		html {
+			padding: 5%;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: overline underline #38488f;
+			color: #38488f;
+		}
+		
+		fieldset {
+			border: 2px solid black;
+			border-right: 100px solid yellowgreen;
+		}
+		
+		#segundo-fieldset{
+			/* margin-top: 100px;
+			margin-bottom: 100px;
+			margin-left: 100px;
+			margin-right: 100px; */
+			/* margin: 100px; todas as margens iguais */
+			/* margin: 50px 100px; margens verticais e horizontais */
+			/* margin: 15px 25px 100px 0; margens uma a uma */
+			margin: 15px 0 0 0; /* somente superior */
+		}
+	
+	
+	</style>
 </head>
 
 <body>
@@ -69,7 +101,7 @@
 			</table>
 		</fieldset>
 
-		<fieldset>
+		<fieldset id="segundo-fieldset">
 			<legend>Dados Profissionais</legend>
 
 			<table>
