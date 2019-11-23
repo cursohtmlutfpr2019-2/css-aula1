@@ -1,0 +1,173 @@
+<html>
+
+<head>    
+	<meta charset="UTF-8">
+	<title> Estilização com CSS </title>
+</head>
+
+<body>
+	<h1>Formulário</h1>
+
+	<form method="POST">
+		<fieldset>
+			<legend>Dados pessoais</legend>
+
+			<table>
+				<tr>
+					<td>
+						<label for="nome"> Nome: </label>
+					</td>
+					<td>
+						<input type="text" name="nome">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="rua"> Endereço: </label>
+					</td>
+					<td>
+						<input type="text" name="rua">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="cidade"> Cidade: </label>
+					</td>
+					<td>
+						<input type="text" name="cidade">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="estado"> Estado: </label>
+					</td>
+					<td>
+						<select name="estado" style="width: 100%">
+							<option value="">Selecione..</option>
+							<option value="PR">Paraná</option>
+							<option value="SC">Santa Catarina</option>
+							<option value="RS">Rio Grande do Sul</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="sexo"> Sexo: </label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<input type="radio" name="sexo" id="masculino">
+							<label for="masculino"> Masculino </label>
+						</div>
+						<div>
+							<input type="radio" name="sexo" id="feminino">
+							<label for="feminino"> Feminino </label>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Dados Profissionais</legend>
+
+			<table>
+				<tr>
+					<td>
+						<label for="cargo" class="pergunta">Natureza do Cargo:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<input type="radio" name="cargo" id="gerencia" checked>
+							<label for="gerencia">Gerência</label>
+						</div>
+						<div>
+							<input type="radio" name="cargo" id="financeiro" checked>
+							<label for="financeiro">Financeiro</label>
+						</div>
+						<div>
+							<input type="radio" name="cargo" id="recepcao" checked>
+							<label for="recepcao">Recepção</label>
+						</div>
+						<div>
+							<input type="radio" name="cargo" id="administrativo" checked>
+							<label for="administrativo">Administrativo</label>
+						</div>
+						<div>
+							<input type="radio" name="cargo" id="juridico" checked>
+							<label for="gerencia">Jurídico</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="area" class="pergunta">Área de Interesse:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<input type="checkbox" name="area" id="computacao">
+							<label for="computacao">Computação</label>
+						</div>
+						<div>
+							<input type="checkbox" name="area" id="biologia">
+							<label for="biologia">Biologia</label>
+						</div>
+						<div>
+							<input type="checkbox" name="area" id="meioambiente">
+							<label for="meioambiente">Meio Ambiente</label>
+						</div>
+						<div>
+							<input type="checkbox" name="area" id="engenharia" checked>
+							<label for="engenharia">Engenharia</label>
+						</div>
+						<div>
+							<input type="checkbox" name="area" id="historia">
+							<label for="historia">História</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="avaliacao" class="pergunta">De 0 a 10, o quanto você se acha capaz de executar as atividades
+							deste
+							cargo?</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="range" name="avaliacao" id="avaliacaoIn" step="1" min="0" max="10"
+							oninput="avaliacaoOut.value = avaliacaoIn.value" value="0" class="range">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<output name="avaliacaoOut" id="avaliacaoOut">0</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="curriculo" class="pergunta">Mini currículo</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea name="curriculo" cols="65" rows="10"></textarea>
+					</td>
+					</td>
+				</tr>
+
+			</table>
+		</fieldset>
+
+		<input type="submit" value="ENVIAR">
+	</form>
+
+</body>
+
+</html>
