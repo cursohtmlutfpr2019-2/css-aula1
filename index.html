@@ -19,7 +19,6 @@
 		
 		fieldset {
 			border: 2px solid black;
-			border-right: 100px solid yellowgreen;
 		}
 		
 		#segundo-fieldset{
@@ -32,6 +31,61 @@
 			/* margin: 15px 25px 100px 0; margens uma a uma */
 			margin: 15px 0 0 0; /* somente superior */
 		}
+		
+		legend {
+			text-transform: uppercase;
+			user-select: none;
+			/* -moz-user-select: none; ESPECÍFICO PARA FIREFOX*/ 
+			border: 1px solid blue;
+			width: 100%;
+			line-height: 25px;
+		}
+		
+		label{
+			font-size: 20px;
+		}
+		
+		label.pergunta{
+			font-weight: bold;
+			-moz-user-select: none;
+			user-select: none;
+		}
+		
+		tr.grupo td{
+			padding: 20px 0 0 0;
+		}
+		
+		input[type="text"], select{
+			border: 1px solid black;
+			line-height: 25px;
+			font-size: 16px;
+			border-radius: 1000px;
+			padding: 0 10px;
+			outline: none;
+		}
+		
+		input[type="text"]:focus, select:focus{
+			border: 1px solid #0044ff;
+			background-color: #91aeff;
+			color: white;
+		}
+		
+		input[type="radio"]+label, 
+		input[type="checkbox"]+label{
+			user-select: none;
+		}
+		
+		input[type="radio"]:checked+label,
+		input[type="checkbox"]:checked+label{
+			color: #0044ff;
+		}
+		
+		
+		
+		
+		
+
+}
 	
 	
 	</style>
@@ -105,9 +159,9 @@
 			<legend>Dados Profissionais</legend>
 
 			<table>
-				<tr>
+				<tr class="grupo">
 					<td>
-						<label for="cargo">Natureza do Cargo:</label>
+						<label for="cargo" class="pergunta">Natureza do Cargo:</label>
 					</td>
 				</tr>
 				<tr>
@@ -134,9 +188,9 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
+				<tr class="grupo">
 					<td>
-						<label for="area" >Área de Interesse:</label>
+						<label for="area" class="pergunta">Área de Interesse:</label>
 					</td>
 				</tr>
 				<tr>
@@ -163,9 +217,9 @@
 						</div>
 					</td>
 				</tr>
-				<tr>
+				<tr class="grupo">
 					<td>
-						<label for="avaliacao">De 0 a 10, o quanto você se acha capaz de executar as atividades
+						<label for="avaliacao" class="pergunta">De 0 a 10, o quanto você se acha capaz de executar as atividades
 							deste
 							cargo?</label>
 					</td>
@@ -181,9 +235,9 @@
 						<output name="avaliacaoOut" id="avaliacaoOut">0</output>
 					</td>
 				</tr>
-				<tr>
+				<tr class="grupo">
 					<td>
-						<label for="curriculo">Mini currículo</label>
+						<label for="curriculo" class="pergunta">Mini currículo</label>
 					</td>
 				</tr>
 				<tr>
